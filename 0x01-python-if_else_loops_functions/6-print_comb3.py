@@ -8,4 +8,3 @@ for i in range(0, 10):
             print("{}{},".format(i, j), end=" ")
         j += 1
     i += 1
-
