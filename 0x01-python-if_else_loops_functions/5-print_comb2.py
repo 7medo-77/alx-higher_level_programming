@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 for iter in range(0, 100):
     if (iter == 99):
-        print(f"{iter:02d}")
+        print("{:02d}".format(iter))
     else:
-        print(f"{iter:02d}", end=", ")
+        print("{:02d}".format(iter), end=", ")
     iter += 1
