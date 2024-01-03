@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-iteration = 0
-alpha = 'a'
-while (iteration < 27):
-    print('a', end= "")
-    iteration += 1
+for a in range(97, 123):
+    if (a == 101 or a == 113):
+        continue
+    else:
+        print("{}".format(chr(a)), end="")
+    a += 1
