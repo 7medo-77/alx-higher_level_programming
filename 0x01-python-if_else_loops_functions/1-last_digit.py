@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 import random
-import math
 
-number = random.randint(-10000,10000)
+number = random.randint(-10000, 10000)
 last_digit = 0
 
 if (number < 0):
