@@ -5,6 +5,3 @@ def uppercase(str):
             a = chr(ord(a) - 32)
         print("{}".format(a), end= "")
     print("")
-
-string = "whatever is in this string"
-uppercase(string)
