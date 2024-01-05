@@ -1,31 +1,50 @@
+# #!/usr/bin/python3
+# if __name__ == "__main__":
+#     from sys import argv, exit
+#     from calculator_1 import add, sub, mul, div
+#
+#     i = 1
+#     signArray = "+-/*"
+#     res = 0
+#
+#     if (len(argv) != 4):
+#         print(
+#             "Usage: ./100-my_calculator.py <a> <operator> <b>"
+#         )
+#         exit(1)
+#
+#     match argv[2]:
+#         case "+":
+#             res = add(int(argv[1]), int(argv[3]))
+#             print("{} {} {} = {}".format(argv[1], argv[2], argv[3], res))
+#         case "-":
+#             res = sub(int(argv[1]), int(argv[3]))
+#             print("{} {} {} = {}".format(argv[1], argv[2], argv[3], res))
+#         case "/":
+#             res = div(int(argv[1]), int(argv[3]))
+#             print("{} {} {} = {}".format(argv[1], argv[2], argv[3], res))
+#         case "*":
+#             res = mul(int(argv[1]), int(argv[3]))
+#             print("{} {} {} = {}".format(argv[1], argv[2], argv[3], res))
+#         case other:
+#             print("Unknown operator. Available operators: +, -, * and /")
+#             exit(1)
 #!/usr/bin/python3
+
 if __name__ == "__main__":
-    from sys import argv, exit
+    """Handle basic arithmetic operations."""
     from calculator_1 import add, sub, mul, div
+    import sys
 
-    i = 1
-    signArray = "+-/*"
-    res = 0
+    if len(sys.argv) - 1 != 3:
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        sys.exit(1)
 
-    if (len(argv) != 4):
-        print(
-            "Usage: ./100-my_calculator.py <a> <operator> <b>"
-        )
-        exit(1)
+    ops = {"+": add, "-": sub, "*": mul, "/": div}
+    if sys.argv[2] not in list(ops.keys()):
+        print("Unknown operator. Available operators: +, -, * and /")
+        sys.exit(1)
 
-    match argv[2]:
-        case "+":
-            res = add(int(argv[1]), int(argv[3]))
-            print("{} {} {} = {}".format(int(argv[1]), argv[2], int(argv[3]), res))
-        case "-":
-            res = sub(int(argv[1]), int(argv[3]))
-            print("{} {} {} = {}".format(int(argv[1]), argv[2], int(argv[3]), res))
-        case "/":
-            res = div(int(argv[1]), int(argv[3]))
-            print("{} {} {} = {}".format(int(argv[1]), argv[2], int(argv[3]), res))
-        case "*":
-            res = mul(int(argv[1]), int(argv[3]))
-            print("{} {} {} = {}".format(int(argv[1]), argv[2], int(argv[3]), res))
-        case other:
-            print("Unknown operator. Available operators: +, -, * and /")
-            exit(1)
+    a = int(sys.argv[1])
+    b = int(sys.argv[3])
+    print("{} {} {} = {}".format(a, sys.argv[2], b, ops[sys.argv[2]](a, b)))
