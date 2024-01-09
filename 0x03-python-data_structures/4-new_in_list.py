@@ -7,4 +7,3 @@ def new_in_list(my_list, idx, element):
         copy.insert(idx, element)
         del copy[idx + 1]
         return (copy)
-
