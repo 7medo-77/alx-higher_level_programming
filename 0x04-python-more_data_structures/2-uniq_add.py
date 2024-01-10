@@ -7,4 +7,3 @@ def uniq_add(my_list=[]):
     for i in new_list:
         rolling_sum += i
     return (rolling_sum)
-
