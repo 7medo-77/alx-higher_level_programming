@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if (not roman_string):
+    if (not roman_string or isinstance(roman_string, int)):
         return (0)
 
     roman_dict = {
