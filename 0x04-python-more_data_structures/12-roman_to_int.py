@@ -11,7 +11,8 @@ def roman_to_int(roman_string):
         for key, value in roman_dict.items():
             if (char == key):
                 if (key == 'I' and index + 1 < len(roman_string)):
-                    if (roman_string[index + 1] == 'V' or roman_string[index + 1] == 'X'):
+                    if (roman_string[index + 1] == 'V' or
+                            roman_string[index + 1] == 'X'):
                         rolling_sum += (value * -1)
                     else:
                         rolling_sum += value
