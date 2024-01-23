@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-"""
-Function to initiate a class
-"""
+"""Square module"""
 class Square:
-    """
-    {}
-    """
+    """Creates class of square with no function attributes"""
     pass
