@@ -9,8 +9,9 @@ class Square:
     error handling
     """
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         self.__size = size
+        self.__position = position
 
     """
     Getter function to get the value of size
@@ -31,6 +32,26 @@ class Square:
             raise ValueError("size must be >= 0")
 
     """
+    Getter function to get the value of position
+    """
+    @property
+    def position(self):
+        return (self.__position)
+
+    """
+    Setter function to set the value of position
+    """
+    @position.setter
+    def position(self, value):
+        if isinstance(value, tuple):
+            for i in value:
+                if i < 0:
+                    raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            raise TypeError("position must be a tuple of 2 positive integers")
+
+
+    """
     Function to calculate the area of a square instance
     """
     def area(self):
@@ -44,6 +65,8 @@ class Square:
             print()
         else:
             for i in range(0, self.__size):
-                for x in range(0, self.__size):
+                for s in range(0, self.__position[0]):
+                    print(" ", end="")
+                for c in range(0, self.__size):
                     print("#", end="")
                 print()
