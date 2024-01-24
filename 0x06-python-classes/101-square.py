@@ -61,15 +61,15 @@ class Square:
 
     def __str__(self):
         """String representation of Class Square"""
-        pos = ""
+        string_print = ""
         if not self.size:
             return "\n"
         for x in range(self.position[1]):
-            pos += "\n"
+            string_print += "\n"
         for y in range(self.size):
             for i in range(self.position[0]):
-                pos += " "
+                string_print += " "
             for j in range(self.size):
-                pos += "#"
-            pos += "\n"
-        return pos
+                string_print += "#"
+            string_print += "\n"
+        return string_print
