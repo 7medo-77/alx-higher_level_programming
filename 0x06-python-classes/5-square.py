@@ -40,7 +40,7 @@ class Square:
     Function to print square by # of size
     """
     def my_print(self):
-        if (self.__size == 1):
+        if (self.__size == 0):
             print()
         else:
             for i in range(0, self.__size):
