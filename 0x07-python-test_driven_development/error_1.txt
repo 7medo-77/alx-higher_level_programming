@@ -1,0 +1,175 @@
+Trying:
+    matrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+    ]
+Expecting nothing
+ok
+Trying:
+    matrix_func(matrix, 3)
+Expecting:
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+    [[1, 2, 3], [4, 5, 6]]
+**********************************************************************
+File "./tests/1-matrix_divided.txt", line 16, in 1-matrix_divided.txt
+Failed example:
+    matrix_func(matrix, 3)
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.11/doctest.py", line 1351, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 1-matrix_divided.txt[1]>", line 1, in <module>
+        matrix_func(matrix, 3)
+        ^^^^^^^^^^^
+    NameError: name 'matrix_func' is not defined
+Trying:
+    matrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+    ]
+Expecting nothing
+ok
+Trying:
+    matrix_func(matrix, )
+Expecting:
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+**********************************************************************
+File "./tests/1-matrix_divided.txt", line 25, in 1-matrix_divided.txt
+Failed example:
+    matrix_func(matrix, )
+Expected:
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+Got:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.11/doctest.py", line 1351, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 1-matrix_divided.txt[3]>", line 1, in <module>
+        matrix_func(matrix, )
+        ^^^^^^^^^^^
+    NameError: name 'matrix_func' is not defined
+Trying:
+    matrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+    ]
+Expecting nothing
+ok
+Trying:
+    matrix_func(matrix, 0)
+Expecting:
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+**********************************************************************
+File "./tests/1-matrix_divided.txt", line 34, in 1-matrix_divided.txt
+Failed example:
+    matrix_func(matrix, 0)
+Expected:
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+Got:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.11/doctest.py", line 1351, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 1-matrix_divided.txt[5]>", line 1, in <module>
+        matrix_func(matrix, 0)
+        ^^^^^^^^^^^
+    NameError: name 'matrix_func' is not defined
+Trying:
+    matrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+    ]
+Expecting nothing
+ok
+Trying:
+    matrix_func()
+Expecting:
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional arguments: 'div'
+**********************************************************************
+File "./tests/1-matrix_divided.txt", line 43, in 1-matrix_divided.txt
+Failed example:
+    matrix_func()
+Expected:
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional arguments: 'div'
+Got:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.11/doctest.py", line 1351, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 1-matrix_divided.txt[7]>", line 1, in <module>
+        matrix_func()
+        ^^^^^^^^^^^
+    NameError: name 'matrix_func' is not defined
+Trying:
+    matrix_func()
+Expecting:
+    None
+**********************************************************************
+File "./tests/1-matrix_divided.txt", line 47, in 1-matrix_divided.txt
+Failed example:
+    matrix_func()
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.11/doctest.py", line 1351, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 1-matrix_divided.txt[8]>", line 1, in <module>
+        matrix_func()
+        ^^^^^^^^^^^
+    NameError: name 'matrix_func' is not defined
+Trying:
+    matrix_func()
+Expecting:
+    None
+**********************************************************************
+File "./tests/1-matrix_divided.txt", line 50, in 1-matrix_divided.txt
+Failed example:
+    matrix_func()
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.11/doctest.py", line 1351, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 1-matrix_divided.txt[9]>", line 1, in <module>
+        matrix_func()
+        ^^^^^^^^^^^
+    NameError: name 'matrix_func' is not defined
+Trying:
+    matrix_func()
+Expecting:
+    None
+**********************************************************************
+File "./tests/1-matrix_divided.txt", line 53, in 1-matrix_divided.txt
+Failed example:
+    matrix_func()
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.11/doctest.py", line 1351, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 1-matrix_divided.txt[10]>", line 1, in <module>
+        matrix_func()
+        ^^^^^^^^^^^
+    NameError: name 'matrix_func' is not defined
+Trying:
+    matrix_func()
+Expecting:
+    None
+**********************************************************************
+File "./tests/1-matrix_divided.txt", line 56, in 1-matrix_divided.txt
+Failed example:
+    matrix_func()
+Exception raised:
+    Traceback (most recent call last):
+      File "/usr/lib/python3.11/doctest.py", line 1351, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 1-matrix_divided.txt[11]>", line 1, in <module>
+        matrix_func()
+        ^^^^^^^^^^^
+    NameError: name 'matrix_func' is not defined
+**********************************************************************
+1 items had failures:
+   8 of  12 in 1-matrix_divided.txt
+12 tests in 1 items.
+4 passed and 8 failed.
+***Test Failed*** 8 failures.
