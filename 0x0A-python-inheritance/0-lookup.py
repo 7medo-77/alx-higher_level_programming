@@ -5,4 +5,4 @@ Returns all methods and attributes of an object as a list
 
 
 def lookup(obj):
-    return (list(obj.__dict__))
+    return (dir(obj))
