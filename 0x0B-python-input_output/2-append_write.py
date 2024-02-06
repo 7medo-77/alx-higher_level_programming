@@ -10,4 +10,3 @@ def append_write(filename="", text=""):
         sentence = text
         bytes = file_1.write(sentence)
         return (bytes)
-
