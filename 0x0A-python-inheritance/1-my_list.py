@@ -1,17 +1,15 @@
 #!/usr/bin/python3
 """
-print sorted list
+contains the MyList class
 """
 
 
 class MyList(list):
-    """
-    Custom class
-    """
+    """a subclass of list"""
     def __init__(self):
-        """Constructor method from parent class"""
+        """initializes the object"""
         super().__init__()
 
     def print_sorted(self):
-        """method that prints a sorted list"""
+        """prints the sorted list"""
         print(sorted(self))
