@@ -1,13 +1,23 @@
 #!/usr/bin/python3
-inherits_from = __import__('4-inherits_from').inherits_from
+BaseGeometry = __import__('6-base_geometry').BaseGeometry
 
-a = True
-if inherits_from(a, int):
-    print("{} inherited from class {}".format(a, int.__name__))
-if inherits_from(a, bool):
-    print("{} inherited from class {}".format(a, bool.__name__))
-if inherits_from(a, object):
-    print("{} inherited from class {}".format(a, object.__name__))
+bg = BaseGeometry()
+
+try:
+    print(bg.area())
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+
+# inherits_from = __import__('4-inherits_from').inherits_from
+
+# a = True
+# if inherits_from(a, int):
+#     print("{} inherited from class {}".format(a, int.__name__))
+# if inherits_from(a, bool):
+#     print("{} inherited from class {}".format(a, bool.__name__))
+# if inherits_from(a, object):
+#     print("{} inherited from class {}".format(a, object.__name__))
 
 
 # is_same_class = __import__('2-is_same_class').is_same_class
