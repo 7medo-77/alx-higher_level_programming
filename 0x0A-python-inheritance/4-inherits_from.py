@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module that defines a function to check if an object 
+Module that defines a function to check if an object
 is a subclass of another object given as paramter
 """
 
