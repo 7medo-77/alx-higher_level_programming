@@ -30,9 +30,6 @@ class Student:
     object with attributes from json file
     """
     def reload_from_json(self, json):
-        for key, value in json.items():
-            if self.key == key:
-                self.value = value
-        # self.first_name = json.get("first_name")
-        # self.last_name = json.get("last_name")
-        # self.age = json.get("age")
+        self.first_name = json.get("first_name")
+        self.last_name = json.get("last_name")
+        self.age = json.get("age")
