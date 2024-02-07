@@ -17,9 +17,10 @@ class Student:
     Method that prints a filtered dictionary representation of an object
     """
     def to_json(self, attrs=None):
-        if not attrs:
+        if attrs is None:
             return (self.__dict__)
         else:
             dict_copy = self.__dict__.copy()
-            dict_1 = {x: dict_copy.get(x) for x in attrs if dict_copy.get(x) is not None}
+            dict_1 = {x: dict_copy.get(x) for x in attrs
+                      if dict_copy.get(x) is not None}
             return (dict_1)
