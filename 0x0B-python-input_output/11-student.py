@@ -31,8 +31,8 @@ class Student:
     """
     def reload_from_json(self, json):
         self.first_name = json.get("first_name") if json.get("first_name") \
-                          is not None else self.first_name
-        self.last_name= json.get("last_name") if json.get("last_name") \
-                          is not None else self.last_name
+            is not None else self.first_name
+        self.last_name = json.get("last_name") if json.get("last_name") \
+            is not None else self.last_name
         self.age = json.get("age") if json.get("age") \
-                          is not None else self.age
+            is not None else self.age
