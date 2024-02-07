@@ -26,7 +26,7 @@ class Student:
             return (dict_1)
 
     """
-    Method that replaces all attributes in 
+    Method that replaces all attributes in
     object with attributes from json file
     """
     def reload_from_json(self, json):
