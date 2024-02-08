@@ -21,5 +21,5 @@ class Square(Rectangle):
 
     def __str__(self):
         """Method which returns the string representation of class Rectangle"""
-        return ("[{}] {}/{}".format(self.__class__.__name__, \
+        return ("[{}] {}/{}".format(self.__class__.__name__,
                 self.__size, self.__size))
