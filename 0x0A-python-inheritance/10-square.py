@@ -13,7 +13,7 @@ class Square(Rectangle):
     def __init__(self, size):
         """Constructor method initializing Rectangle object"""
         super().integer_validator("size", size)
-        self.__size= size
+        self.__size = size
 
     def area(self):
         """Method which returns the area of Rectangle"""
@@ -21,5 +21,5 @@ class Square(Rectangle):
 
     def __str__(self):
         """Method which returns the string representation of class Rectangle"""
-        return ("[{}] {}/{}".format(self.__class__.__name__,\
-                                     self.__size, self.__size))
+        return ("[{}] {}/{}".format(self.__class__.__name__, \
+                self.__size, self.__size))
