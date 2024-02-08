@@ -20,8 +20,5 @@ class BaseGeometry:
         """Function that raises exception"""
         if (not isinstance(value, int)):
             raise TypeError("{} must be an integer".format(name))
-        elif (value <= 0):
+        if (value <= 0):
             raise ValueError("{} must be greater than 0".format(name))
-        else:
-            self.value = value
-            self.name = name
