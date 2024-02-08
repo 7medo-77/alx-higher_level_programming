@@ -12,16 +12,12 @@ class BaseGeometry:
     def __init__(self):
         return
 
-    """
-    Function that raises exception
-    """
     def area(self):
+        """Function that raises exception"""
         raise Exception("area() is not implemented")
 
-    """
-    Function that raises exception
-    """
     def integer_validator(self, name, value):
+        """Function that raises exception"""
         if (not isinstance(value, int)):
             raise TypeError("{} must be an integer".format(name))
         elif (value <= 0):
