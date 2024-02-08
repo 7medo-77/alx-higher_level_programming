@@ -17,12 +17,8 @@ class MyInt(int):
         """rich comparison method == which is inverted to !="""
         if (self is other):
             return (False)
-        else:
-            return (True)
 
     def __ne__(self, other):
         """rich comparison method != which is inverted to =="""
-        if (self is other):
-            return (True)
-        elif (self is not other):
+        if (self is not other):
             return (False)
