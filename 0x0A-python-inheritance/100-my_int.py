@@ -15,8 +15,8 @@ class MyInt(int):
 
     def __eq__(self, other):
         """rich comparison method == which is inverted to !="""
-        return (self != other)
+        return (self is not other)
 
     def __nq__(self, other):
         """rich comparison method != which is inverted to =="""
-        return (self == other)
+        return (self is other)
