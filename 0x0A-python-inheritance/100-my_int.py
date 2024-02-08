@@ -9,16 +9,18 @@ class MyInt(int):
     """
     MyInt child class, which has very peculiar rebelliousness
     """
-    def __init__(self):
+    def __init__(self, num):
         """Constructor method inherited from parent int"""
         super().__init__()
+        self.num = num
+        return (self.num)
 
     def __eq__(self, other):
         """rich comparison method == which is inverted to !="""
-        if (self is other):
+        if (self.num is other):
             return (False)
 
     def __ne__(self, other):
         """rich comparison method != which is inverted to =="""
-        if (self is not other):
+        if (self.num is not other):
             return (False)

@@ -1,10 +1,18 @@
 #!/usr/bin/python3
-Square = __import__('10-square').Square
+MyInt = __import__('100-my_int').MyInt
 
-s = Square(13)
+my_i = MyInt(3)
+print(my_i)
+print(my_i == 3)
+print(my_i != 3)
 
-print(s)
-print(s.area())
+
+# Square = __import__('10-square').Square
+
+# s = Square(13)
+
+# print(s)
+# print(s.area())
 
 # Rectangle = __import__('9-rectangle').Rectangle
 
