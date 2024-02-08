@@ -1,10 +1,17 @@
 #!/usr/bin/python3
-Rectangle = __import__('9-rectangle').Rectangle
+Square = __import__('10-square').Square
 
-r = Rectangle(3, 5)
+s = Square(13)
 
-print(r)
-print(r.area())
+print(s)
+print(s.area())
+
+# Rectangle = __import__('9-rectangle').Rectangle
+
+# r = Rectangle(3, 5)
+
+# print(r)
+# print(r.area())
 
 # BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
