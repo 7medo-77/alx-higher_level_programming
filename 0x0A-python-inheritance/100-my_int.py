@@ -15,8 +15,14 @@ class MyInt(int):
 
     def __eq__(self, other):
         """rich comparison method == which is inverted to !="""
-        return (self is not other)
+        if (self is other):
+            return (False)
+        else:
+            return (True)
 
-    def __nq__(self, other):
+    def __ne__(self, other):
         """rich comparison method != which is inverted to =="""
-        return (self is other)
+        if (self is other):
+            return (True)
+        elif (self is not other):
+            return (False)
