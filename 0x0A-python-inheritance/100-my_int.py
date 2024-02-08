@@ -13,7 +13,6 @@ class MyInt(int):
         """Constructor method inherited from parent int"""
         super().__init__()
         self.num = num
-        return (self.num)
 
     def __eq__(self, other):
         """rich comparison method == which is inverted to !="""
@@ -24,3 +23,5 @@ class MyInt(int):
         """rich comparison method != which is inverted to =="""
         if (self.num is not other):
             return (False)
+        else:
+            return (True)
