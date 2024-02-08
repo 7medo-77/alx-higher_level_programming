@@ -9,9 +9,6 @@ class BaseGeometry:
     BaseGeometry class which forms the base class for different
     child classes
     """
-    def __init__(self):
-        return
-
     def area(self):
         """Function that raises exception"""
         raise Exception("area() is not implemented")
