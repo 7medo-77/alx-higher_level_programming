@@ -105,19 +105,37 @@ class Rectangle(Base):
             print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
+        """String representation of the instance"""
         return ("[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__, self.id, self.__x, self.__y, self.__width, self.__height))
 
     def update(self, *args, **kwargs):
+        """
+        Update methods that updates the attributes 
+        in the method paramters"""
         arg_dict = {1 :"id", 2 :"width", 3 :"height", 4 :"x", 5 :"y"}
         if (args):
             for index, arg in enumerate(args):
                 for key, value in arg_dict.items():
                     if index + 1 == key:
-                        # self.__dict__[value] = arg
-                        setattr(self, value, arg)
+                        if (key == 2 or key == 3):
+                            arg = self.input_validator_dimension(arg, value)
+                            setattr(self, value, arg)
+                        elif (key == 4 or key == 5):
+                            arg = self.input_validator_axis(arg, value)
+                            setattr(self, value, arg)
+                        else:
+                            setattr(self, value, arg)
         else:
             for attribute, integer in kwargs.items():
-                for value in arg_dict.values():
+                for key, value in arg_dict.items():
                     if (value == attribute):
-                        setattr(self, value, integer)
+                        if (key == 2 or key == 3):
+                            integer = self.input_validator_dimension(integer, value)
+                            setattr(self, value, integer)
+                        elif (key == 4 or key == 5):
+                            integer = self.input_validator_axis(integer, value)
+                            setattr(self, value, integer)
+                        else:
+
+                            setattr(self, value, integer)
             
