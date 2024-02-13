@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-
+Module that defines a Rectangle class which inherits from the Base class
 """
 from .base import Base
 
@@ -110,8 +110,9 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """
-        Update methods that updates the attributes 
-        in the method paramters"""
+        Update method that updates the attributes 
+        in the method's paramters
+        """
         arg_dict = {1 :"id", 2 :"width", 3 :"height", 4 :"x", 5 :"y"}
         if (args):
             for index, arg in enumerate(args):
@@ -136,6 +137,5 @@ class Rectangle(Base):
                             integer = self.input_validator_axis(integer, value)
                             setattr(self, value, integer)
                         else:
-
                             setattr(self, value, integer)
             
