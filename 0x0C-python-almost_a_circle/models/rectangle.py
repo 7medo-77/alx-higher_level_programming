@@ -4,6 +4,7 @@ Module that defines a Rectangle class which inherits from the Base class
 """
 from .base import Base
 
+
 class Rectangle(Base):
     """
     Rectangle class
@@ -41,10 +42,6 @@ class Rectangle(Base):
         else:
             return (axis)
 
-
-    """
-    Getter methods in Rectangle class
-    """
     @property
     def x(self):
         """Getter Method for private attribute x"""
@@ -78,12 +75,10 @@ class Rectangle(Base):
         """Setter Method for private attribute x"""
         self.__y = self.input_validator_axis(y, "y")
 
-
     @width.setter
     def width(self, width):
         """Setter Method for private attribute x"""
         self.__width = self.input_validator_dimension(width, "width")
-
 
     @height.setter
     def height(self, height):
@@ -106,14 +101,19 @@ class Rectangle(Base):
 
     def __str__(self):
         """String representation of the instance"""
-        return ("[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__, self.id, self.__x, self.__y, self.__width, self.__height))
+        return (
+            "[{}] ({}) {}/{} - {}/{}".format(
+                self.__class__.__name__, self.id, self.__x,
+                self.__y, self.__width, self.__height
+            )
+        )
 
     def update(self, *args, **kwargs):
         """
-        Update method that updates the attributes 
+        Update method that updates the attributes
         in the method's paramters
         """
-        arg_dict = {1 :"id", 2 :"width", 3 :"height", 4 :"x", 5 :"y"}
+        arg_dict = {1: "id", 2: "width", 3: "height", 4: "x", 5: "y"}
         if (args):
             for index, arg in enumerate(args):
                 for key, value in arg_dict.items():
@@ -131,17 +131,19 @@ class Rectangle(Base):
                 for key, value in arg_dict.items():
                     if (value == attribute):
                         if (key == 2 or key == 3):
-                            integer = self.input_validator_dimension(integer, value)
+                            integer = self.input_validator_dimension(
+                                integer, value)
                             setattr(self, value, integer)
                         elif (key == 4 or key == 5):
                             integer = self.input_validator_axis(integer, value)
                             setattr(self, value, integer)
                         else:
                             setattr(self, value, integer)
-            
+
     def to_dictionary(self):
         """Return dictionary representation of an instance"""
         self_dict = {
-            "x" : self.x, "y" : self.y, "id" : self.id, "width": self.width, "height": self.height
+            "x": self.x, "y": self.y, "id": self.id,
+            "width": self.width, "height": self.height
         }
         return (self_dict)
