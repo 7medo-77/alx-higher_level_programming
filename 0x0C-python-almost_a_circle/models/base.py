@@ -41,3 +41,20 @@ class Base:
 
         with open(name, 'w') as file_1:
             file_1.write(dictionary)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        Returns JSON string representation of an object as a list
+        """
+        json_list = []
+        if (not json_string or json_string is None):
+            return (json_list)
+        else:
+            return(json.loads(json_string))
+
+    @classmethod
+    def create(cls, **dictionary):
+        return
+
+
