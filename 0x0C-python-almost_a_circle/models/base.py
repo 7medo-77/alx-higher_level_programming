@@ -55,6 +55,12 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        return
+        """
+        Create method that creates an instnace of the class from the dictionary representation of a class
+        """
+        dummy = cls(1,1) if cls.__name__ == "Rectangle" else cls(1)
+        for key, value in dictionary.items():
+            setattr(dummy, key, value)
+        return (dummy)
 
 
