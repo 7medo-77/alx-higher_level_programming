@@ -51,16 +51,34 @@ class Base:
         if (not json_string or json_string is None):
             return (json_list)
         else:
-            return(json.loads(json_string))
+            return (json.loads(json_string))
 
     @classmethod
     def create(cls, **dictionary):
         """
-        Create method that creates an instnace of the class from the dictionary representation of a class
+        Create method that creates an instnace of the
+        class from the dictionary representation of a class
         """
-        dummy = cls(1,1) if cls.__name__ == "Rectangle" else cls(1)
+        dummy = cls(1, 1) if cls.__name__ == "Rectangle" else cls(1)
         for key, value in dictionary.items():
             setattr(dummy, key, value)
         return (dummy)
 
+    @classmethod
+    def load_from_file(cls):
+        """
+        Returns a list of objects from a file
+        """
+        name = cls.__name__ + ".json"
 
+        with open(name, 'r') as file:
+            json_string = file.read()
+
+        list_dict = cls.from_json_string(json_string)
+        list_object = []
+
+        for obj_dict in list_dict:
+            a_ = cls.create(**obj_dict)
+            list_object.append(a_)
+
+        return (list_object)
