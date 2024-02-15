@@ -74,7 +74,7 @@ class Base:
         with open(name, 'r') as file:
             json_string = file.read()
 
-        if (json_string == ""):
+        if (json_string == "" or not file):
             return (list_object)
 
         list_dict = cls.from_json_string(json_string)
