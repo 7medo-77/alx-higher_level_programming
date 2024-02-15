@@ -70,13 +70,14 @@ class Base:
         Returns a list of objects from a file
         """
         name = cls.__name__ + ".json"
-
+        list_object = []
         with open(name, 'r') as file:
             json_string = file.read()
 
-        list_dict = cls.from_json_string(json_string)
-        list_object = []
+        if (json_string == ""):
+            return (list_object)
 
+        list_dict = cls.from_json_string(json_string)
         for obj_dict in list_dict:
             a_ = cls.create(**obj_dict)
             list_object.append(a_)
