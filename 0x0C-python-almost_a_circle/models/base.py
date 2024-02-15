@@ -36,7 +36,7 @@ class Base:
             list_dict.append(object_.to_dictionary())
 
         dictionary = cls.to_json_string(list_dict) if \
-            list_objs is not None else []
+            list_objs is not None else list_dict
         name = cls.__name__ + ".json"
 
         with open(name, 'w') as file_1:
