@@ -95,7 +95,7 @@ class Base:
         list_dicts = []
         name = cls.__name__ + ".csv"
         fileds = ['id', 'width', 'height', 'x', 'y'] if \
-        cls.__name__ == "Rectangle" else ['id', 'size', 'x', 'y']
+            cls.__name__ == "Rectangle" else ['id', 'size', 'x', 'y']
 
         if (list_objs):
             for class_object in list_objs:
