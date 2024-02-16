@@ -25,8 +25,8 @@ class Square(Rectangle, Base):
     @size.setter
     def size(self, width):
         """Setter for virtual attribute size"""
-        self.width = self.input_validator_dimension(width, "width")
-        self.height = self.input_validator_dimension(width, "height")
+        self.width = self.input_validator_dimension(width, "size")
+        self.height = self.input_validator_dimension(width, "size")
 
     def __str__(self):
         """String representation of the instance"""
@@ -47,7 +47,7 @@ class Square(Rectangle, Base):
                 for key, value in arg_dict.items():
                     if index + 1 == key:
                         if (key == 2):
-                            arg = self.input_validator_axis(arg, value)
+                            arg = self.input_validator_dimension(arg, value)
                             self.size = arg
                         elif (key == 3 or key == 4):
                             arg = self.input_validator_axis(arg, value)
@@ -59,6 +59,7 @@ class Square(Rectangle, Base):
                 for key, value in arg_dict.items():
                     if (value == attribute):
                         if (key == 2):
+                            integer = self.input_validator_dimension(integer, value)
                             self.size = integer
                         elif (key == 3 or key == 4):
                             integer = self.input_validator_axis(integer, value)

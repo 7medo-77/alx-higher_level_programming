@@ -116,11 +116,12 @@ class Base:
             cls.__name__ == "Rectangle" else ['id', 'size', 'x', 'y']
         list_class = []
 
-        with open(name, 'r') as csv_file:
-            csv_read = csv.DictReader(csv_file, fieldnames=fields)
+        if os.path.exists(name):
+            with open(name, 'r') as csv_file:
+                csv_read = csv.DictReader(csv_file, fieldnames=fields)
 
-            for row in csv_read:
-                instance = cls.create(**row)
-                list_class.append(instance)
+                for row in csv_read:
+                    instance = cls.create(**row)
+                    list_class.append(instance)
 
         return (list_class)
