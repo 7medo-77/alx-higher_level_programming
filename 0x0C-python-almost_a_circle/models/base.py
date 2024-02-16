@@ -63,7 +63,7 @@ class Base:
         """
         dummy = cls(1, 1) if cls.__name__ == "Rectangle" else cls(1)
         for key, value in dictionary.items():
-            setattr(dummy, key, value)
+            setattr(dummy, key, value if key != "id" else int(value))
         return (dummy)
 
     @classmethod
@@ -76,7 +76,7 @@ class Base:
         with open(name, 'r') as file:
             json_string = file.read()
 
-        if (json_string == "" or not file):
+        if (json_string == '' or not file):
             return (list_object)
 
         list_dict = cls.from_json_string(json_string)
