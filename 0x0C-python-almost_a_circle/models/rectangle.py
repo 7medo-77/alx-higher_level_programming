@@ -25,11 +25,7 @@ class Rectangle(Base):
         Input validation method for dimension data flow
         """
         if (not isinstance(dimension, int)):
-            try:
-                res = int(dimension)
-                return (res)
-            except ValueError:
-                raise TypeError("{} must be and integer".format(attribute))
+            raise TypeError("{} must be an integer".format(attribute))
         elif (dimension <= 0):
             raise ValueError("{} must be > 0".format(attribute))
         else:
@@ -40,12 +36,8 @@ class Rectangle(Base):
         Input validation method for dimension data flow
         """
         if (not isinstance(axis, int)):
-            try:
-                res = int(axis)
-                return (res)
-            except ValueError:
-                raise TypeError("{} must be and integer".format(attribute))
-            raise TypeError("{} must be and integer".format(attribute))
+            raise TypeError("{} must be an integer".format(attribute))
+            raise TypeError("{} must be an integer".format(attribute))
         elif (axis < 0):
             raise ValueError("{} must be >= 0".format(attribute))
         else:

@@ -63,7 +63,8 @@ class Base:
         """
         dummy = cls(1, 1) if cls.__name__ == "Rectangle" else cls(1)
         for key, value in dictionary.items():
-            setattr(dummy, key, value if key != "id" else int(value))
+            integer = int(value)
+            setattr(dummy, key, integer)
         return (dummy)
 
     @classmethod
@@ -103,7 +104,6 @@ class Base:
 
         with open(name, 'w') as csv_file:
             writer = csv.DictWriter(csv_file, fieldnames=fields)
-            # writer.writeheader()
             writer.writerows(list_dicts)
 
     @classmethod
