@@ -3,6 +3,7 @@
 Module that defines a base class
 """
 import json
+import csv
 
 
 class Base:
@@ -84,3 +85,22 @@ class Base:
             list_object.append(a_)
 
         return (list_object)
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        Writes a file in .csv format for a list of objects passed
+        to the method
+        """
+        list_dicts = []
+        name = cls.__name__ + ".csv"
+        fileds = ['id', 'width', 'height', 'x', 'y'] if \
+        cls.__name__ == "Rectangle" else ['id', 'size', 'x', 'y']
+
+        for class_object in list_objs:
+            list_dicts.append(class_object.to_dictionary())
+
+        with open(name, 'w') as csv_file:
+            writer = csv.DictWriter(csv_file, fieldnames=fileds)
+            writer.writeheader()
+            writer.writerows(list_dicts)
