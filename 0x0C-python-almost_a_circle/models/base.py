@@ -94,7 +94,7 @@ class Base:
         """
         list_dicts = []
         name = cls.__name__ + ".csv"
-        fileds = ['id', 'width', 'height', 'x', 'y'] if \
+        fields = ['id', 'width', 'height', 'x', 'y'] if \
             cls.__name__ == "Rectangle" else ['id', 'size', 'x', 'y']
 
         if (list_objs):
@@ -102,8 +102,8 @@ class Base:
                 list_dicts.append(class_object.to_dictionary())
 
         with open(name, 'w') as csv_file:
-            writer = csv.DictWriter(csv_file, fieldnames=fileds)
-            writer.writeheader()
+            writer = csv.DictWriter(csv_file, fieldnames=fields)
+            # writer.writeheader()
             writer.writerows(list_dicts)
 
     @classmethod
@@ -113,13 +113,15 @@ class Base:
         a .csv file
         """
         name = cls.__name__ + ".csv"
-        # list_dicts = []
+        fields = ['id', 'width', 'height', 'x', 'y'] if \
+            cls.__name__ == "Rectangle" else ['id', 'size', 'x', 'y']
         list_class = []
 
         with open(name, 'r') as csv_file:
-            csv_read = csv.DictReader(csv_file)
+            csv_read = csv.DictReader(csv_file, fieldnames=fields)
 
             for row in csv_read:
                 instance = cls.create(**row)
                 list_class.append(instance)
+
         return (list_class)
