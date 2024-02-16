@@ -123,5 +123,3 @@ class Base:
                 instance = cls.create(**row)
                 list_class.append(instance)
         return (list_class)
-
-
