@@ -4,6 +4,7 @@ Module that defines a base class
 """
 import json
 import csv
+import os
 
 
 class Base:
@@ -74,16 +75,14 @@ class Base:
         """
         name = cls.__name__ + ".json"
         list_object = []
-        with open(name, 'r') as file:
-            json_string = file.read()
 
-        if (len(json_string) == 0):
-            return (list_object)
-
-        list_dict = cls.from_json_string(json_string)
-        for obj_dict in list_dict:
-            a_ = cls.create(**obj_dict)
-            list_object.append(a_)
+        if os.path.exists(name):
+            with open(name, 'r') as file:
+                json_string = file.read()
+            list_dict = cls.from_json_string(json_string)
+            for obj_dict in list_dict:
+                a_ = cls.create(**obj_dict)
+                list_object.append(a_)
 
         return (list_object)
 
