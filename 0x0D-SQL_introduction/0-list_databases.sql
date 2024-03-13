@@ -1,2 +1,3 @@
---SQL query to list all databases
+-- SQL query to list all databases
+-- in MySQL
 SHOW DATABASES;
