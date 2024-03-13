@@ -5,4 +5,3 @@ CREATE TABLE first_table IF NOT EXISTS(
 		name VARCHAR(256),
 		id INT,
 )
-
