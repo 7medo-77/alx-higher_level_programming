@@ -1,5 +1,5 @@
 -- Script that creates a table
 CREATE TABLE IF NOT EXISTS `unique_id`(
-		`id` INT NOT NULL UNIQUE,
+		`id` INT PRIMARY KEY,
 		`name` VARCHAR(256)
 );
