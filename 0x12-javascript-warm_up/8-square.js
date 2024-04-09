@@ -12,5 +12,5 @@ if (numberIterations) {
     console.log(mySentence);
   }
 } else {
-  console.log('Missing number of occurrences');
+  console.log('Missing size');
 }
