@@ -1,19 +1,19 @@
 #!/usr/bin/node
-let myArray = [];
+const myArray = [];
 
-for (let i = 2; i < process.argv.length; i++){
-  let arg_num = parseInt(process.argv[i]);
-  myArray.push(arg_num);
+for (let i = 2; i < process.argv.length; i++) {
+  const argNum = parseInt(process.argv[i]);
+  myArray.push(argNum);
 }
 
 let maxNumber = myArray[0];
 let secondMaxNumber = myArray[0];
 
-for (let number of myArray){
-  if (number > maxNumber){
+for (const number of myArray) {
+  if (number > maxNumber) {
     maxNumber = number;
   }
-  if (number > secondMaxNumber && number < maxNumber || secondMaxNumber == maxNumber){
+  if ((number > secondMaxNumber && number < maxNumber) || (secondMaxNumber === maxNumber)) {
     secondMaxNumber = number;
   }
 }
