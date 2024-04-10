@@ -1,6 +1,6 @@
 #!/usr/bin/node
 exports.nbOccurences = function (list, searchElement) {
-  let repArray = [];
+  const repArray = [];
 
   for (const num of list) {
     if (num === searchElement) {
@@ -8,4 +8,4 @@ exports.nbOccurences = function (list, searchElement) {
     }
   }
   return (repArray.length);
-}
+};
