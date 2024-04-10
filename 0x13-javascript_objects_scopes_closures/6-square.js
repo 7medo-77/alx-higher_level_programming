@@ -10,7 +10,7 @@ class Square extends SquareParent {
     for (let i = 0; i < this.height; i++) {
       let printArray = '';
       for (let j = 0; j < this.width; j++) {
-        printArray += c ? 'C' : 'X';
+        printArray += c ? c : 'X';
       }
       console.log(printArray);
     }
