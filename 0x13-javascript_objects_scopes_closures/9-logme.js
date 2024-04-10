@@ -10,5 +10,5 @@ exports.logMe = function (item) {
   } else {
     logObject[`${lastNum}`] = item;
   }
-  console.log(`${lastNum} : ${item}`);
+  console.log(`${lastNum}: ${item}`);
 }
