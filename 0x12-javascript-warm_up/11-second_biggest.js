@@ -13,7 +13,7 @@ for (const number of myArray) {
   if (number > maxNumber) {
     maxNumber = number;
   }
-  if ((number > secondMaxNumber && number < maxNumber) || (secondMaxNumber === maxNumber && number === myArray[0])) {
+  if ((number >= secondMaxNumber && number < maxNumber) || (secondMaxNumber === maxNumber && number === myArray[0])) {
     secondMaxNumber = number;
   }
 }
