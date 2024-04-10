@@ -1,7 +1,14 @@
 #!/usr/bin/node
-let numberArguments = 0;
+const logObject = {};
 
 exports.logMe = function (item) {
-  console.log(`${numberArguments} : ${item}`)
-  numberArguments++;
+  let myArray = Object.keys(logObject)
+  const lastNum = myArray.length;
+
+  if (myArray.length === 0){
+    logObject[`${lastNum}`] = item;
+  } else {
+    logObject[`${lastNum}`] = item;
+  }
+  console.log(`${lastNum} : ${item}`);
 }
