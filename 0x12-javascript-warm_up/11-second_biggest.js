@@ -14,7 +14,7 @@ for (let i = 0; i < myArray.length; i++) {
     maxNumber = myArray[i];
   }
   if ((myArray[i] > secondMaxNumber && myArray[i] < maxNumber) || (myArray[i - 1] > secondMaxNumber && myArray[i - 1] < maxNumber)) {
-    if (!myArray[i + 1]) {
+    if (!myArray[i + 1] && (myArray[i] < maxNumber && myArray[i - 1] < maxNumber)) {
       secondMaxNumber = myArray[i] >= myArray[i - 1] ? myArray[i] : myArray[i - 1];
     } else {
       secondMaxNumber = myArray[i] >= myArray[i - 1] ? myArray[i - 1] : myArray[i];
