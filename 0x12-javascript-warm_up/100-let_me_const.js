@@ -1,3 +1,3 @@
 #!/usr/bin/node
-require('.100-main.js')
-var myVar = 333;
+// let myVar = require('./100-main.js').myVar;
+myVar = 333;
