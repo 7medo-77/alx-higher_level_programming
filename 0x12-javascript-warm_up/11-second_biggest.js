@@ -13,8 +13,8 @@ for (let i = 0; i < myArray.length; i++) {
   if (myArray[i] > maxNumber) {
     maxNumber = myArray[i];
   }
-  if ((myArray[i] > secondMaxNumber && myArray[i] < maxNumber) || (myArray[i-1] > secondMaxNumber && myArray[i-1] < maxNumber)) {
-    secondMaxNumber = myArray[i] >= myArray[i-1] ? myArray[i-1] : myArray[i];
+  if ((myArray[i] > secondMaxNumber && myArray[i] < maxNumber) || (myArray[i - 1] > secondMaxNumber && myArray[i - 1] < maxNumber)) {
+    secondMaxNumber = myArray[i] >= myArray[i - 1] ? myArray[i - 1] : myArray[i];
   }
 }
 
