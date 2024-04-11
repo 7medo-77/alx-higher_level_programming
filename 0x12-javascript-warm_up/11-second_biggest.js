@@ -6,20 +6,24 @@ for (let i = 2; i < process.argv.length; i++) {
   myArray.push(argNum);
 }
 
-let maxNumber = myArray[0];
-let secondMaxNumber = myArray[0];
+let maxNumber = Number.MIN_SAFE_INTEGER;
+let secondMaxNumber = Number.MIN_SAFE_INTEGER;
 
-for (const number of myArray) {
-  if (number > maxNumber) {
-    maxNumber = number;
+for (let i = 0; i < myArray.length; i++) {
+  if (myArray[i] > maxNumber) {
+    maxNumber = myArray[i];
   }
-  if ((number >= secondMaxNumber && number < maxNumber) || (secondMaxNumber === maxNumber && number === myArray[0])) {
-    secondMaxNumber = number;
+  if ((myArray[i] > secondMaxNumber && myArray[i] < maxNumber) || (myArray[i-1] > secondMaxNumber && myArray[i-1] < maxNumber)) {
+    secondMaxNumber = myArray[i] >= myArray[i-1] ? myArray[i-1] : myArray[i];
   }
+  console.log(maxNumber);
+  console.log(secondMaxNumber);
+  console.log('---');
 }
 
 if (process.argv.length <= 3) {
   console.log(0);
 } else {
   console.log(secondMaxNumber);
+  console.log(maxNumber);
 }
