@@ -6,8 +6,8 @@ for (let i = 2; i < process.argv.length; i++) {
   myArray.push(argNum);
 }
 
-let maxNumber = myArray[0];
-let secondMaxNumber = myArray[0];
+let maxNumber = Number.MIN_SAFE_INTEGER;
+let secondMaxNumber = Number.MIN_SAFE_INTEGER;
 
 for (const number of myArray) {
   if (number > maxNumber) {
