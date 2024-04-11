@@ -16,14 +16,10 @@ for (let i = 0; i < myArray.length; i++) {
   if ((myArray[i] > secondMaxNumber && myArray[i] < maxNumber) || (myArray[i-1] > secondMaxNumber && myArray[i-1] < maxNumber)) {
     secondMaxNumber = myArray[i] >= myArray[i-1] ? myArray[i-1] : myArray[i];
   }
-  console.log(maxNumber);
-  console.log(secondMaxNumber);
-  console.log('---');
 }
 
 if (process.argv.length <= 3) {
   console.log(0);
 } else {
   console.log(secondMaxNumber);
-  console.log(maxNumber);
 }
