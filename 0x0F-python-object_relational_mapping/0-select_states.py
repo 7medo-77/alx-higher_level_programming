@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import MySQLdb
 import sys
+import MySQLdb
 
 conn = MySQLdb.connect(
             host="localhost",
@@ -10,8 +10,11 @@ conn = MySQLdb.connect(
             database=sys.argv[3],
         )
 cur = conn.cursor()
-conn.execute("SELECT * FROM states ORDER BY `id` ASC")
+conn.execute("SELECT * FROM states ORDER BY states.id ASC")
 
 results = conn.fetchall()
 for row in results:
     print(row)
+
+cur.close()
+conn.close()
