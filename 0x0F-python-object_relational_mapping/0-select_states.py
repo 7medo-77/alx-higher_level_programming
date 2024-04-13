@@ -11,9 +11,9 @@ if __name__ == "__main__":
                 database=sys.argv[3],
             )
     cur = conn.cursor()
-    conn.execute("SELECT * FROM states ORDER BY states.id ASC")
+    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
 
-    results = conn.fetchall()
+    results = cur.fetchall()
     for row in results:
         print(row)
 
