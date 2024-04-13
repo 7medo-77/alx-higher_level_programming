@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Python script listing all states by ID in ascending order"""
+
 import sys
 import MySQLdb
 
