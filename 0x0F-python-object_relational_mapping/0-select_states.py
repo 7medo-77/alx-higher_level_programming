@@ -2,19 +2,20 @@
 import sys
 import MySQLdb
 
-conn = MySQLdb.connect(
-            host="localhost",
-            port=3306,
-            user=sys.argv[1],
-            password=sys.argv[2],
-            database=sys.argv[3],
-        )
-cur = conn.cursor()
-conn.execute("SELECT * FROM states ORDER BY states.id ASC")
+if __name__ == "__main__":
+    conn = MySQLdb.connect(
+                host="localhost",
+                port=3306,
+                user=sys.argv[1],
+                password=sys.argv[2],
+                database=sys.argv[3],
+            )
+    cur = conn.cursor()
+    conn.execute("SELECT * FROM states ORDER BY states.id ASC")
 
-results = conn.fetchall()
-for row in results:
-    print(row)
+    results = conn.fetchall()
+    for row in results:
+        print(row)
 
-cur.close()
-conn.close()
+    cur.close()
+    conn.close()
