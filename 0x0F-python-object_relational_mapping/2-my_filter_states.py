@@ -18,9 +18,9 @@ if __name__ == "__main__":
             BY `id` ASC".format(argv[4])
     cur.execute(query)
 
-    n_words = cur.fetchall()
-
-    for word in n_words:
+    res_words = cur.fetchall()
+    for word in res_words:
         print(word)
+
     cur.close()
     conn.close()
