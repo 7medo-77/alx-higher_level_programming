@@ -17,7 +17,7 @@ if __name__ == "__main__":
     arg = "\'"+argv[4].split()[0]+"\'" 
     query = """
         SELECT cities.name FROM (
-            SELECT cities.name, states.name FROM cities
+            SELECT cities.name AS name, states.name FROM cities
             JOIN states ON states.id = cities.state_id
         )
         ORDER BY cities.name ASC;
