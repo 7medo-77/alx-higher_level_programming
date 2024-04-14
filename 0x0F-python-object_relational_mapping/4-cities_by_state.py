@@ -17,7 +17,6 @@ if __name__ == "__main__":
     query = """
         USE {}
         SELECT * FROM cities
-        JOIN states ON states.name = cities.state_id
         ORDER BY cities.id ASC
     """.format(argv[3])
     cur.execute(query)
