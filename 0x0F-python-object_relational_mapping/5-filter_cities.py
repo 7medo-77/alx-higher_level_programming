@@ -20,11 +20,10 @@ if __name__ == "__main__":
         SELECT cities.name FROM cities
         JOIN states ON states.id = cities.state_id
         WHERE cities.name = '{}'
-        ORDER BY cities.name ASC;
+        ORDER BY cities.id ASC;
     """.format(arg)
 
     cur.execute(query)
-    print(arg)
 
     res_words = cur.fetchall()
 
