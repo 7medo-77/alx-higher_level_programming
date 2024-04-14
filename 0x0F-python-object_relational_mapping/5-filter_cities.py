@@ -14,12 +14,12 @@ if __name__ == "__main__":
             database=argv[3],
         )
     cur = conn.cursor()
-    # arg = argv[4].split()[0]
+    arg = "\'"+argv[4].split()[0]+"\'" 
     query = """
-        SELECT cities.name FROM cities
+        SELECT cities.name FROM cities WHERE state.name = {}
         JOIN states ON states.id = cities.state_id
-        GROUP BY states.name;
-    """
+        ORDER BY cities.name ASC;
+    """.format(arg)
 
     cur.execute(query)
 
