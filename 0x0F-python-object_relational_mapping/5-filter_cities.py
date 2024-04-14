@@ -18,6 +18,7 @@ if __name__ == "__main__":
     query = """
         SELECT cities.name FROM cities
         JOIN states ON states.id = cities.state_id
+        GROUP BY states.name;
         ORDER BY cities.name;
     """
 
