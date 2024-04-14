@@ -22,5 +22,5 @@ if __name__ == "__main__":
 
     with conn.cursor() as cur:
         cur.execute(query)
+        print(", ".join(x[0] for x in cur.fetchall()))
 
-    print(", ".join(x[0] for x in cur.fetchall()))
