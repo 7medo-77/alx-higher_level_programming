@@ -18,11 +18,10 @@ if __name__ == "__main__":
     query = """
         SELECT cities.name FROM (
             SELECT cities.name, states.name FROM cities
-            WHERE states.name = {}
             JOIN states ON states.id = cities.state_id
         )
         ORDER BY cities.name ASC;
-    """.format(arg)
+    """
 
     cur.execute(query)
 
