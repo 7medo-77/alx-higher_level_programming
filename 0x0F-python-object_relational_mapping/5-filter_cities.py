@@ -14,13 +14,12 @@ if __name__ == "__main__":
             database=argv[3],
         )
 
-    arg = argv[4].split()[0]
     query = """SELECT cities.name FROM cities
         JOIN states ON states.id = cities.state_id
-        WHERE states.name = '{}'
-        ORDER BY cities.id ASC""".format(arg)
+        WHERE states.name = %(name)s
+        ORDER BY cities.id ASC"""
 
     with conn.cursor() as cur:
-        cur.execute(query)
+        cur.execute(query, {'name': argv[4]})
         print(", ".join(x[0] for x in cur.fetchall()))
 
