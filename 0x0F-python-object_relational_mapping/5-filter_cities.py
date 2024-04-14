@@ -15,6 +15,7 @@ if __name__ == "__main__":
         )
     cur = conn.cursor()
     arg = argv[4].split()[0]
+
     query = """
         SELECT cities.name FROM cities
         JOIN states ON states.id = cities.state_id
@@ -23,6 +24,7 @@ if __name__ == "__main__":
     """.format(arg)
 
     cur.execute(query)
+    print(arg)
 
     res_words = cur.fetchall()
 
