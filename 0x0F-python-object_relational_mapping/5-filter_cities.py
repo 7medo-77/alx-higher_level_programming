@@ -16,11 +16,11 @@ if __name__ == "__main__":
     cur = conn.cursor()
     arg = argv[4].split()[0]
     query = """
-        SELECT cities.name FROM cities WHERE states.name = {}
+        SELECT cities.name FROM cities
         JOIN states ON states.id = cities.state_id
         GROUP BY states.name
         SORT BY cities.name
-    """.format(arg)
+    """
 
     cur.execute(query)
 
