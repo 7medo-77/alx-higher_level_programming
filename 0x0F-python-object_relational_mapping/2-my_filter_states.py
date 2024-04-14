@@ -15,7 +15,7 @@ if __name__ == "__main__":
         )
     cur = conn.cursor()
     query = "SELECT * FROM states WHERE states.name = \'{}\' ORDER\
-            BY `name` ASC".format(argv[4])
+            BY `id` ASC".format(argv[4])
     cur.execute(query)
 
     n_words = cur.fetchall()
