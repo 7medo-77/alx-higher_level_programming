@@ -19,7 +19,7 @@ if __name__ == "__main__":
         SELECT cities.name FROM cities
         JOIN states ON states.id = cities.state_id
         GROUP BY states.name
-        SORT BY cities.name
+        ORDER BY cities.name
     """
 
     cur.execute(query)
