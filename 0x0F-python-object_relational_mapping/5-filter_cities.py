@@ -26,7 +26,7 @@ if __name__ == "__main__":
     res_words = cur.fetchall()
 
     for index, word in enumerate(res_words):
-        print("{}".format(word), end="") if index < len(res_words) else print("{},".format(word), end="")
+        print("{}".format(word), end="") if index < len(res_words) else print("{},".format(word))
 
     cur.close()
     conn.close()
