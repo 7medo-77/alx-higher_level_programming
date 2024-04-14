@@ -14,11 +14,9 @@ if __name__ == "__main__":
             database=argv[3],
         )
     cur = conn.cursor()
-    query = """
-        USE {}
-        SELECT * FROM cities
+    query = """ SELECT * FROM cities
         ORDER BY cities.id ASC
-    """.format(argv[3])
+    """
     cur.execute(query)
 
     res_words = cur.fetchall()
