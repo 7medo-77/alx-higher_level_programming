@@ -14,7 +14,7 @@ if __name__ == "__main__":
             database=argv[3],
         )
     cur = conn.cursor()
-    query = "SELECT * FROM states WHERE states.name BINARY = \'{}\' ORDER\
+    query = "SELECT * FROM states WHERE states.name = \'{}\' ORDER\
             BY `id` ASC".format(argv[4])
     cur.execute(query)
 
