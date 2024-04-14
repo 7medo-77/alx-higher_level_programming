@@ -13,16 +13,14 @@ if __name__ == "__main__":
             password=argv[2],
             database=argv[3],
         )
-    cur = conn.cursor()
-    arg = argv[4].split()[0]
 
+    arg = argv[4].split()[0]
     query = """SELECT cities.name FROM cities
         JOIN states ON states.id = cities.state_id
         WHERE states.name = '{}'
         ORDER BY cities.id ASC""".format(arg)
 
-    cur.execute(query)
-    print(", ".join(x[0] for x in cur.fetchall()))
+    with conn.cursor() as cur:
+        cur.execute(query)
 
-    cur.close()
-    conn.close()
+    print(", ".join(x[0] for x in cur.fetchall()))
