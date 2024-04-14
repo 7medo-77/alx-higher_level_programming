@@ -16,7 +16,7 @@ if __name__ == "__main__":
     cur = conn.cursor()
     query = """
         USE hbtn_0e_4_usa
-        SELECT cities.id, cities.name, cities.state_id FROM cities
+        SELECT * FROM cities
         JOIN states ON states.name = cities.state_id
         ORDER BY cities.id ASC
     """
