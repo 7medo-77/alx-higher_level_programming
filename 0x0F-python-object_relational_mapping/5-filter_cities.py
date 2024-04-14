@@ -16,11 +16,13 @@ if __name__ == "__main__":
     cur = conn.cursor()
     arg = "\'"+argv[4].split()[0]+"\'" 
     query = """
-        SELECT cities.name, states.name FROM cities
-        JOIN states ON states.id = cities.state_id
-        GROUP BY states.name;
+        SELECT cities.name FROM (
+            SELECT cities.name, states.name FROM cities
+            WHERE states.name = {}
+            JOIN states ON states.id = cities.state_id
+        )
         ORDER BY cities.name ASC;
-    """
+    """.format(arg)
 
     cur.execute(query)
 
