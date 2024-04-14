@@ -14,14 +14,16 @@ if __name__ == "__main__":
             database=argv[3],
         )
     cur = conn.cursor()
+    arg = argv[4].split()[0]
+    print(arg)
     query = "SELECT * FROM states WHERE states.name = \'{}\' ORDER\
-            BY `id` ASC".format(argv[4])
-    cur.execute(query)
+            BY `id` ASC".format(arg)
+#    cur.execute(query)
     print(query)
 
-    res_words = cur.fetchall()
-    for word in res_words:
-        print(word)
+#    res_words = cur.fetchall()
+#    for word in res_words:
+#        print(word)
 
     cur.close()
     conn.close()
