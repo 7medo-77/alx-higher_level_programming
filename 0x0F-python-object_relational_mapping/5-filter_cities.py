@@ -17,7 +17,7 @@ if __name__ == "__main__":
     arg = argv[4].split()[0]
 
     query = """SELECT cities.name FROM cities
-        JOIN states ON cities.state_id = states.id
+        JOIN states ON states.id = cities.state_id
         WHERE states.name = '{}'
         ORDER BY cities.id ASC""".format(arg)
 
