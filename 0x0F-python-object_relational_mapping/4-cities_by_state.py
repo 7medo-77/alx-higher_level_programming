@@ -15,11 +15,11 @@ if __name__ == "__main__":
         )
     cur = conn.cursor()
     query = """
-        USE hbtn_0e_4_usa
+        USE {}
         SELECT * FROM cities
         JOIN states ON states.name = cities.state_id
         ORDER BY cities.id ASC
-    """
+    """.format(argv[3])
     cur.execute(query)
 
     res_words = cur.fetchall()
