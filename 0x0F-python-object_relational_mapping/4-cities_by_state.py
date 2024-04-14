@@ -14,7 +14,9 @@ if __name__ == "__main__":
             database=argv[3],
         )
     cur = conn.cursor()
-    query = """ SELECT * FROM cities
+    query = """
+        SELECT * FROM cities
+        JOIN states ON states.name = cities.state_id
         ORDER BY cities.id ASC
     """
     cur.execute(query)
