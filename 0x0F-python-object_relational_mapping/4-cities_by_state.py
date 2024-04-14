@@ -14,10 +14,9 @@ if __name__ == "__main__":
             database=argv[3],
         )
     cur = conn.cursor()
-    arg = argv[4].split()[0]
     query = """
         USE hbtn_0e_4_usa
-        SELECT cities.id, cities.name, states.name FROM cities
+        SELECT cities.id, cities.name, cities.state_id FROM cities
         JOIN states ON states.name = cities.state_id
         ORDER BY cities.id ASC
     """
