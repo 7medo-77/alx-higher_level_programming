@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     cur.execute(query)
 
-    res_words = cur.fetchall()
+    # res_words = cur.fetchall()
 
     print(", ".join(map(lambda x: x[0], cur.fetchall())))
     # for index, word in enumerate(res_words):
