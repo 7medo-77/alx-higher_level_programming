@@ -15,7 +15,10 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     session = Session(bind=engine)
 
-    res_obj = session.query(State).filter(State.name.like("%a%")).delete()
+    res_obj = session.query(State).filter(State.name.like("%a%"))
+
+    for obj in res_obj.all():
+        session.delete(obj)
 
     session.commit()
     session.close()
