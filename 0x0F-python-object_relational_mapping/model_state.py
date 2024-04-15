@@ -17,3 +17,7 @@ class State(Base):
 
     id = Column(Integer, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
+
+    def __repr__(self):
+        rep = "{}: {}".format(self.id, self.name)
+        return (rep)
