@@ -16,7 +16,7 @@ if __name__ == "__main__":
     session = Session(bind=engine)
     states = session.query(State).first()
 
-    print(states)
+    print(states if states else "Nothing")
 
     session.commit()
     session.close()
