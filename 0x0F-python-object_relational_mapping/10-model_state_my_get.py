@@ -20,8 +20,10 @@ if __name__ == "__main__":
     if states:
         for state in states:
             print(state.id)
+        print(states)
     else:
-            print("Not found")
+        print("Not found")
+        print(states)
 
     session.commit()
     session.close()
