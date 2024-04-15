@@ -16,7 +16,7 @@ if __name__ == "__main__":
     session = Session(bind=engine)
     states = session.query(State).order_by(State.id)
     for state in states:
-        print(state)
+        print("{}: {}".format(state.id, state.name))
 
     session.commit()
     session.close()
