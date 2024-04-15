@@ -18,7 +18,7 @@ if __name__ == "__main__":
                     .filter(State.name == sys.argv[4])\
                     .order_by(State.id)
     for state in states:
-        print(state.id)
+        print(state.id if state else "Not found")
 
     session.commit()
     session.close()
