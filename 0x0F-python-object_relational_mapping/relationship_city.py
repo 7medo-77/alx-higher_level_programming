@@ -18,5 +18,5 @@ class City(Base):
     state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
 
     def __repr__(self):
-        rep = "{}: ({}) {}".format(self.state_id, self.id, self.name)
+        rep = "{}: {}".format(self.id, self.name)
         return (rep)
