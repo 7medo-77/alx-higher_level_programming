@@ -16,7 +16,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     session = Session(bind=engine)
 
-    res_obj = session.query(City).join(State).order_by(City.id)
+    res_obj = session.query(City).join(State, City.state_id == State.id).order_by(City.id)
 
     for obj in res_obj.all():
         print("{}: ({}) {}".format(obj.State.name, obj.City.id, obj.City.name))
