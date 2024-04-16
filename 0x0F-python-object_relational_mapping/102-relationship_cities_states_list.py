@@ -19,7 +19,7 @@ if __name__ == "__main__":
     # State.relationship("City", backref="states", order_by=City.id)
     results = session.query(City).join(City.state).order_by(City.id)
 
-    for state in results.all():
-        print("{}: {} -> {}".format(state.id, state.name, state.state.name))
+    for city in results.all():
+        print("{}: {} -> {}".format(city.id, city.name, city.state))
 
     session.close()
