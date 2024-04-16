@@ -14,7 +14,7 @@ if __name__ == "__main__":
             database=argv[3],
         )
     cur = conn.cursor()
-    cur.execute("SELECT * FROM states WHERE `name` LIKE 'N%'")
+    cur.execute("SELECT * FROM states WHERE `name` LIKE UPPER('N%')")
 
     n_words = cur.fetchall()
 
