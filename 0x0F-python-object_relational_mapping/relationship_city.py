@@ -5,7 +5,7 @@ class State and connects class to database
 """
 
 
-from model_state import Base, State
+from relationship_state import Base, State
 from sqlalchemy import String, Integer, Column, ForeignKey
 
 
