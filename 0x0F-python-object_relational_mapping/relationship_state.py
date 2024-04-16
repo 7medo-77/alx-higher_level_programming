@@ -18,7 +18,7 @@ class State(Base):
 
     id = Column(Integer, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
-    cities = relationship('City', backref='states')
+    cities = relationship('City', backref='state')
 
     def __repr__(self):
         rep = "{}: {}".format(self.id, self.name)

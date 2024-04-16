@@ -16,7 +16,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     session = Session(bind=engine)
 
-    # State.relationship("City", backref="states", order_by=City.id)
     results = session.query(City).join(City.state).order_by(City.id)
 
     for city in results.all():
