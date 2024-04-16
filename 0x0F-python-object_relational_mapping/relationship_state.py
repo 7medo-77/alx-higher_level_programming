@@ -5,7 +5,6 @@ class State and connects class to database
 """
 
 
-from relationship_city import City
 from sqlalchemy import String, Integer, Column
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
