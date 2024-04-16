@@ -17,10 +17,10 @@ if __name__ == "__main__":
     session = Session(bind=engine)
 
     cal_state = State(name='California')
-    san_city = City(name='San Francisco', state_id=cal_state.id)
 
     session.add(cal_state)
     session.commit()
+    san_city = City(name='San Francisco', state_id=cal_state.id)
     session.add(san_city)
     session.commit()
 
