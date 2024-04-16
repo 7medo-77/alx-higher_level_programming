@@ -14,10 +14,13 @@ if __name__ == "__main__":
             database=argv[3],
         )
     cur = conn.cursor()
-    query = "SELECT * FROM states WHERE states.name = \'{}\' ORDER\
+    query = "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER\
             BY `id` ASC".format(argv[4])
     cur.execute(query)
 
     res_words = cur.fetchall()
     for word in res_words:
         print(word)
+
+    cur.close()
+    conn.close()
