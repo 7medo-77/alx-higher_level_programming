@@ -21,6 +21,3 @@ if __name__ == "__main__":
     res_words = cur.fetchall()
     for word in res_words:
         print(word)
-
-    cur.close()
-    conn.close()
