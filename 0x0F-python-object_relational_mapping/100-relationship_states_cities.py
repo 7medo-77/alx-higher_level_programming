@@ -19,6 +19,8 @@ if __name__ == "__main__":
     san_city = City(name='San Francisco')
     cal_state = State(name='California')
     san_city.state_id = cal_state.id
+    session.add(san_city)
+    session.add(cal_state)
 
     session.commit()
     session.close()
