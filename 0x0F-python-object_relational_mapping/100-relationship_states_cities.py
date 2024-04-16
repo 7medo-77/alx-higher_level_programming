@@ -19,7 +19,6 @@ if __name__ == "__main__":
     san_city = City(name='San Francisco')
     cal_state = State(name='California')
     san_city.state_id = cal_state.id
-    cal_state.cities = san_city
 
     session.commit()
     session.close()
