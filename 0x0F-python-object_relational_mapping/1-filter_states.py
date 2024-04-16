@@ -15,7 +15,7 @@ if __name__ == "__main__":
         )
     cur = conn.cursor()
     cur.execute("SELECT * FROM states WHERE name\
-                LIKE UPPER('N%')\
+                LIKE BINARY 'N%'\
                 ORDER BY states.id")
 
     n_words = cur.fetchall()
