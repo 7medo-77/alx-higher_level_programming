@@ -17,7 +17,6 @@ if __name__ == "__main__":
     query = "SELECT * FROM states WHERE states.name = \'{}\' ORDER\
             BY `id` ASC".format(argv[4])
     cur.execute(query)
-    print(query)
 
     res_words = cur.fetchall()
     for word in res_words:

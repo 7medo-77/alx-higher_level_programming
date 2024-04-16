@@ -22,5 +22,6 @@ if __name__ == "__main__":
 
     for word in n_words:
         print(word)
+
     cur.close()
     conn.close()
