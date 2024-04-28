@@ -1,3 +1,3 @@
 #!/bin/bash
-# Bash script which displays the size of the body of the HTTP response
+# Bash script which uses a DELETE method for HTTP request
 curl -Xs DELETE "$1"

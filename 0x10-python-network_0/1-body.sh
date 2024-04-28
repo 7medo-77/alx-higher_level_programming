@@ -1,3 +1,4 @@
 #!/bin/bash
-# Bash script which displays the size of the body of the HTTP response
+# Bash script which displays the body of the response 
+# and does nothing on failure
 curl -Lfs "$1"
