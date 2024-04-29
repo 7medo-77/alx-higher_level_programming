@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 """Python script which fetches a link and returs the HTTP response body"""
 import requests
-from requests import exceptions
 import sys
 
 
 if __name__ == "__main__":
     param = {"q": sys.argv[1] if len(sys.argv) == 2 else ""}
-    response = requests.post('http://0.0.0.0:5000/', data=param)
+    response = requests.post('http://0.0.0.0:5000/search_user', data=param)
     try:
         if response.json():
             print("[{}] {}".format(response.json()['id'],
