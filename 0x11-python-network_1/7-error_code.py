@@ -5,8 +5,8 @@ import sys
 
 
 if __name__ == "__main__":
-    try:
+    # try:
         r = requests.get(sys.argv[1])
         print(r.text)
-    except requests.exceptions.HTTPError:
-        print("Error code: {}".format(r.status_code))
+    # except requests.exceptions.HTTPError:
+    #     print("Error code: {}".format(r.status_code))
