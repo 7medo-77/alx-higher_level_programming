@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Python script which fetches a link and returs the HTTP response body"""
-import urllib.request
+import urllib.request 
+import urllib.error
 import sys
 
 
@@ -9,5 +10,5 @@ if __name__ == "__main__":
         try:
             response = request.read().decode('utf-8')
             print(response)
-        except urllib.request.HTTPError as e:
+        except urllib.error.HTTPError as e:
             print("Error code: {}".format(e.code))
