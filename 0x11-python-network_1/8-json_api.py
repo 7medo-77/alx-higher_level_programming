@@ -6,7 +6,7 @@ import sys
 
 if __name__ == "__main__":
     param = {"q": sys.argv[1] if len(sys.argv) == 2 else ""}
-    response = requests.post('http://0.0.0.0:5000/search_user', param)
+    response = requests.post('http://0.0.0.0:5000/', param)
     try:
         if response.json():
             print("[{}] {}".format(response.json()['id'],
