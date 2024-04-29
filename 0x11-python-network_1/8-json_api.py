@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Python script which fetches a link and returs the HTTP response body"""
 import requests
+from requests import exceptions
 import sys
 
 
@@ -13,5 +14,5 @@ if __name__ == "__main__":
                                    response.json()['name']))
         else:
             print("No result")
-    except (requests.exceptions.JSONDecodeError, requests.exceptions.InvalidJSONError):
+    except (exceptions.JSONDecodeError, exceptions.InvalidJSONError):
         print("Not a valid JSON")
