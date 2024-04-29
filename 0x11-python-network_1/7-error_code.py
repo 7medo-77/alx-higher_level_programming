@@ -8,5 +8,5 @@ if __name__ == "__main__":
     try:
         r = requests.get(sys.argv[1])
         print(r.text)
-    except requests.exceptions.HTTPError as e:
-        print(e.strerror)
+    except requests.exceptions.HTTPError:
+        print(r.status_code)
