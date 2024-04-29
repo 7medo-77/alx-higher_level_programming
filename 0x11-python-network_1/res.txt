@@ -1,3 +1,0 @@
-Body response:$
-    - type: <class 'str'>$
-    - content: OK$
