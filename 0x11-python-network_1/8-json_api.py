@@ -14,5 +14,5 @@ if __name__ == "__main__":
                                    response.json()['name']))
         else:
             print("No result")
-    except (exceptions.JSONDecodeError, exceptions.InvalidJSONError):
+    except ValueError:
         print("Not a valid JSON")
