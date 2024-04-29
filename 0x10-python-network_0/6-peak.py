@@ -7,11 +7,11 @@ import string
 def find_peak(list_of_integers):
     peak_list = []
     for index, num in enumerate(list_of_integers):
-        if (not list_of_integers[index - 1] or not list_of_integers[index + 1] ):
-            if (not list_of_integers[index - 1] and num > list_of_integers[index + 1] ):
+        if (index == 0 or index == len(list_of_integers) - 1):
+            if (index == 0 and num > list_of_integers[index + 1] ):
                 peak_list.append(num)
-            elif (not list_of_integers[index + 1] and num > list_of_integers[index - 1]):  
+            elif (index == len(list_of_integers) - 1 and num > list_of_integers[index - 1]):  
                 peak_list.append(num)
         elif (num > list_of_integers[index + 1] and num > list_of_integers[index - 1]):
             peak_list.append(num)
-    return (max(peak_list))
+    return (max(peak_list) if len(peak_list) > 0 else None)
