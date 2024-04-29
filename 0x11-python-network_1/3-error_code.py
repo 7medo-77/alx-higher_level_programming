@@ -7,9 +7,10 @@ import sys
 
 if __name__ == "__main__":
     response_obj = request.Request(sys.argv[1])
-    with request.urlopen(response_obj) as request:
-        try:
+
+    try:
+        with request.urlopen(response_obj) as request:
             response = request.read().decode('ascii')
             print(response)
-        except error.HTTPError as e:
-            print("Error code: {}".format(e.code))
+    except error.HTTPError as e:
+        print("Error code: {}".format(e.code))
