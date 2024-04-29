@@ -5,11 +5,12 @@ import sys
 
 
 if __name__ == "__main__":
-    param = {"q": sys.argv[1] if sys.argv[1] else ""}
+    param = {"q": sys.argv[1] if len(sys.argv) == 2 else ""}
     response = requests.post('http://0.0.0.0:5000/search_user', param)
     try:
         if response.json():
-            print("[{}] {}".format(response.json()['id'], response.json()['name']))
+            print("[{}] {}".format(response.json()['id'],
+                                   response.json()['name']))
         else:
             print("No result")
     except requests.exceptions.InvalidJSONError:
