@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Python script which fetches a link and returs the HTTP response body"""
-import urllib.request 
+import urllib.request
 import urllib.error
 import sys
 
