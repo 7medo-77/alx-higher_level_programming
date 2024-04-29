@@ -7,4 +7,10 @@ import sys
 if __name__ == "__main__":
     param = {"q": sys.argv[1] if sys.argv[1] else ""}
     response = requests.post('http://0.0.0.0:5000/search_user', param)
-    print(response.json()['id'])
+    try:
+        if response.json():
+            print("[{}] {}".format(response.json()['id'], response.json()['name']))
+        else:
+            print("No result")
+    except requests.exceptions.InvalidJSONError:
+        print("Not a valid JSON")
