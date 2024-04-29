@@ -9,7 +9,7 @@ if __name__ == "__main__":
     response_obj = request.Request(sys.argv[1])
     with request.urlopen(response_obj) as request:
         try:
-            response = request.read().decode('utf-8')
+            response = request.read().decode('ascii')
             print(response)
         except error.HTTPError as e:
             print("Error code: {}".format(e.code))
