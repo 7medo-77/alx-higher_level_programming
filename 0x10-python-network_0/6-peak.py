@@ -3,6 +3,7 @@
 
 
 def find_peak(list_of_integers):
+    """Function that finds peak in an array"""
     peak_list = []
     for index, num in enumerate(list_of_integers):
         if (index == 0 or index == len(list_of_integers) - 1):
