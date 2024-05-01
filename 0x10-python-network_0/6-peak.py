@@ -2,8 +2,6 @@
 """Python script which finds the peak element in an array"""
 
 
-import string
-
 def find_peak(list_of_integers):
     peak_list = []
     for index, num in enumerate(list_of_integers):
