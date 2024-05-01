@@ -1,3 +1,3 @@
 #!/bin/bash
 # Bash script sends a PUT request along with a custom header variable
-curl -sL -I -X PUT "You got me!" "0.0.0.0:5000/catch_me"
+curl -sL -X PUT "You got me!" "0.0.0.0:5000/catch_me"
