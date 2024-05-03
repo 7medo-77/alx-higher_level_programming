@@ -13,11 +13,20 @@ if __name__ == "__main__":
     response = requests.request("GET",
                                 url_string,)
     list_json = []
-    for index, response in enumerate(response.json()[-11:-1]):
+
+    for index, response in enumerate(response.json()[0:10]):
         tuple_json = (response['sha'], response.get("commit")
                       .get("author").get("name"))
         list_json.append(tuple_json)
+
+    # for index, response in enumerate(response.json()[-11:-1]):
+    #     tuple_json = (response['sha'], response.get("commit")
+    #                   .get("author").get("name"))
+    #     list_json.append(tuple_json)
+
+
+    # for index, element in enumerate(list_json):
+    #     print("{} -> {}: {}".format(index + 1, element[0], element[1]))
+
     for index, element in enumerate(list_json):
         print("{}: {}".format(element[0], element[1]))
-    # print(list_json)
-    # print(response.json()[0:9])
