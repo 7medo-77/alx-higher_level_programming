@@ -24,7 +24,6 @@ if __name__ == "__main__":
     #                   .get("author").get("name"))
     #     list_json.append(tuple_json)
 
-
     # for index, element in enumerate(list_json):
     #     print("{} -> {}: {}".format(index + 1, element[0], element[1]))
 
