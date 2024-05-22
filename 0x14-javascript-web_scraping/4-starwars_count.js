@@ -11,7 +11,7 @@ request(apiCall, (error, response, body) => {
 
   let num = 0;
   const jsonReply = JSON.parse(response.body);
-  for (res of jsonReply.results) {
+  for (const res of jsonReply.results) {
     if (res.characters.find(character => character === wedgeAntilles)) {
       num++;
     }
