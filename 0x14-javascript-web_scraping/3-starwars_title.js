@@ -7,6 +7,6 @@ request(apiCall, (error, response, body) => {
   if (error) {
     console.log(response.error);
   }
-  jsonReply = JSON.parse(response.body);
+  const jsonReply = JSON.parse(response.body);
   console.log(jsonReply.title);
 });
