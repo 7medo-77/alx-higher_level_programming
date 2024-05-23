@@ -15,12 +15,10 @@ if __name__ == "__main__":
 
     responseUser = requests.request("GET", userCall)
     userDict = responseUser.json()
-    # pprint(userDict)
 
     for user in userDict:
-        if user.get('id') == id:
+        if user.get('id') == int(id):
             name = user['name']
-    print(name)
 
     response = requests.request("GET", apiCall)
     resDict = response.json()
@@ -30,7 +28,7 @@ if __name__ == "__main__":
     # pprint(resDict)
 
     for task in resDict:
-        if task.get('userId') == id:
+        if task.get('userId') == int(id):
             totalNum+=1
             if (task.get('completed')):
                 doneNum+=1
