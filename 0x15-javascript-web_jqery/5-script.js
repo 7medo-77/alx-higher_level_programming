@@ -1,14 +1,4 @@
-document.ready(() => {
-	$('#toggle_header').on("click", function() {
-		const header = $('header')
-		if (header.hasClass('red')) {
-			header.removeClass('red')
-			header.addClass('green')
-		}
-		else if (header.hasClass('green')){
-			header.removeClass('green')
-			header.addClass('red')
-		}
-		// else { header.addClass('red') }
-	});
-})
+$('#add_item').on("click", function() {
+	const uList = $('ul.my_list');
+	uList.append("<li>Item</li>");
+});
