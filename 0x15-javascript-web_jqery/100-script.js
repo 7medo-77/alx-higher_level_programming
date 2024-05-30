@@ -1,3 +1,4 @@
-$(document).ready(() => {
-	$('header').css('color', '#F0000');
+document.addEventListener("DOMContentLoaded", () => {
+	const head = document.querySelector("header");
+	head.style.color = "#FF0000";
 })
