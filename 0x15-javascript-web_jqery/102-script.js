@@ -8,7 +8,6 @@ $(document).ready(() => {
             url: request,
             success: (response) => {
                 const result = response.hello;
-                console.log(result);
                 $('#hello').text(result);
             },
         })
